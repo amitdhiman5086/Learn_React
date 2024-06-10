@@ -2,6 +2,7 @@ import { restaurentList } from "./config";
 import RestrountCard from "./RestaurentCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 // import React from "react";
 
 function filterData(searchText, restaurentList) {
@@ -70,7 +71,7 @@ const Body = () => {
 
       <div className="restro-cards">
         {filteredrestaurent.map((res) => {
-          return <RestrountCard {...res.info} key={res.info.id} />;
+          return <Link to={"/restaurent/"+res.info.id} key={res.info.id}><RestrountCard {...res.info}  /></Link>;
         })}
         {
           //Rember to res is returning one not restaurentList

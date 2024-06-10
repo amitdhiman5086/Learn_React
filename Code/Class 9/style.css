@@ -43,3 +43,11 @@
     background-color: gray;
     margin: 5px;
 }
+.restaurent-menu img {
+    width: 200px;
+    height: 200px;
+}
+.restaurent-menu {
+   display: flex;
+   gap: 20%;
+}
