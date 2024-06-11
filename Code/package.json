@@ -1,0 +1,35 @@
+{
+  "name": "class-3",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitdhiman5086/Learn_React.git"
+  },
+  "author": "Amit Dhiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitdhiman5086/Learn_React/issues"
+  },
+  "homepage": "https://github.com/amitdhiman5086/Learn_React#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.38",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.4"
+  },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "maintained node versions"
+  ],
+  "description": ""
+}
