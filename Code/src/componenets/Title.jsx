@@ -1,8 +1,9 @@
-import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOffline from "../utils/useOffline";
 import UserData from "../utils/UserData";
-
+import store from "../utils/store";
+import { useSelector } from "react-redux";
+import { useState, useContext } from "react";
 const loggedInUser = () => {
   return true;
 };
@@ -25,6 +26,9 @@ export const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const { user } = useContext(UserData);
+  const cartItems = useSelector((store) => store.cart.item);
+
+  console.log(cartItems);
 
   const isOnline = useOffline();
   return (
@@ -44,13 +48,14 @@ export const Header = () => {
           <Link to="/instamart">
             <li>Instamart</li>
           </Link>
+          <Link to="/cart">
+            <li>Cart - {cartItems.length} items</li>
+          </Link>
         </ul>
         <h1>{isOnline ? "🔴" : "✅"}</h1>
         {isLoggedIn ? (
           <div className="flex ">
-
-            <h1
-            className="pt-6">{user.name}</h1>
+            <h1 className="pt-6">{user.name}</h1>
             <button
               className="bg-blue-400 p-3 m-3 hover:bg-blue-800 rounded-md"
               onClick={() => {

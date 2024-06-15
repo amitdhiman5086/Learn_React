@@ -7,7 +7,7 @@ export const RestrountCard = ({
   }) => {
     // console.log(info.name);
     return (
-      <div className="w-52 p-3 m-3 shadow-lg hover:scale-110 transition-all h-max">
+      <div className="w-52 p-3 m-3 shadow-lg hover:scale-110 hover:animate-bounce">
         <img
           src={
             IMG_CDN +
